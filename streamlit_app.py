@@ -42,32 +42,25 @@ def upload_page():
         
         st.write("Extracted text:")
         st.write(extracted_text)
+
+        extracted_text_bypass = "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"
         
         # Ask user for decryption key
         user_key = st.text_input("Paste your derived decryption key:", type="password")
         if st.button("Decode Text"):
             try:
-                # Decode the base64 encoded extracted text (assuming it was encoded before encryption)
-                extracted_text_bypass = "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"
-                decoded_data = base64.b64decode(extracted_text_bypass)
-                
-                # Extract salt, iv, and ciphertext
-                salt = decoded_data[:16]
-                iv = decoded_data[16:32]
-                ciphertext = decoded_data[32:]
-                
-                # Derive the same 256-bit key using the secret key and salt
-                kdf = PBKDF2HMAC(
-                    algorithm=hashes.SHA256(),
-                    length=32,
-                    salt=salt,
-                    iterations=100000,
-                    backend=default_backend()
-                )
-                key = kdf.derive(user_key.encode())
+                                    # Decode the user key from base64
+                secret_key = base64.urlsafe_b64decode(user_key)
 
-                # Initialize AES in CBC mode with the IV
-                cipher = Cipher(algorithms.AES(key), modes.CBC(iv), backend=default_backend())
+                # Decode the encrypted message from base64
+                decoded_data = base64.b64decode(extracted_text_bypass)
+
+                # Extract the IV and ciphertext
+                iv = decoded_data[:16]
+                ciphertext = decoded_data[16:]
+
+                # Initialize AES in CBC mode with the provided key and IV
+                cipher = Cipher(algorithms.AES(secret_key), modes.CBC(iv))
 
                 # Decrypt the message
                 decryptor = cipher.decryptor()
@@ -77,8 +70,10 @@ def upload_page():
                 unpadder = padding.PKCS7(128).unpadder()
                 message = unpadder.update(padded_data) + unpadder.finalize()
 
-                st.write("Decoded text:")
-                st.write(message.decode())
+                # Display the decrypted message
+                st.write("Decrypted Message:")
+                st.write(message.decode('utf-8'))
+
             except Exception as e:
                 st.error("Invalid decryption key or text could not be decoded.")
 
