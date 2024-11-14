@@ -31,10 +31,10 @@ def upload_page():
     if uploaded_image is not None:
         image = Image.open(uploaded_image)
         image_np = np.array(image)
-        st.image(image, caption='', use_column_width=True)
+        st.image(image, caption='', use_container_width=True)
         
         # Load OCR model from easyocr
-        reader = easyocr.Reader(['en'])  # Disable GPU to avoid compatibility issues
+        reader = easyocr.Reader(['en'], gpu = False)  # Disable GPU to avoid compatibility issues
         st.write("procesando...")
         # Extract text using OCR
         result = reader.readtext(image_np, detail=0)
