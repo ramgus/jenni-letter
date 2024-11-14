@@ -2,5 +2,4 @@ cryptography
 streamlit
 pillow
 easyocr
-cryptography
 base64
